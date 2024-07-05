@@ -5,10 +5,10 @@ export default function App() {
         <div className='App'>
             <div className='sidebar'>
                 <div className="upperside">
-
+                    <div className="uppersidetop"></div>
                 </div>
                 <div className='lowerside'>
-                    
+
                 </div>
             </div>
             <div className='main'>
