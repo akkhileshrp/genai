@@ -1,11 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT;
 app.use(bodyParser.json());
+app.use(cors());
 const configuration = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 const modelId = "gemini-pro";
 const model = configuration.getGenerativeModel({ model: modelId });
