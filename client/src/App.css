@@ -1,0 +1,62 @@
+.mainpage {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.leftout {
+    width: 20%;
+    background-color: red;
+    overflow: hidden;
+}
+
+.rightout {
+    width: 80%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.leftsection {
+    background-color: rgb(58, 58, 58);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newchat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 10%;
+}
+
+.textone {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.newchat div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.edit {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.allchat {
+    height: 70%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}

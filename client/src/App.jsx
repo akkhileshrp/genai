@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
+import LeftSection from "./components/LeftSection";
+import RightSection from "./components/RightSection";
+import "./App.css";
 
-export default function App() {
+const App = () => {
     return (
-        <div className='App'>
-            <div className='sidebar'>
-                <div className="upperside">
-                    <div className="uppersidetop"></div>
-                </div>
-                <div className='lowerside'>
-
-                </div>
+        <main className="mainpage">
+            <div className="leftout">
+                <LeftSection />
             </div>
-            <div className='main'>
-
+            <div className="rightout">
+                <RightSection />
             </div>
-        </div>
+        </main>
     );
 };
+
+export default App;
