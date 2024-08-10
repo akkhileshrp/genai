@@ -9,7 +9,7 @@ const LeftSection = () => {
     useEffect(() => {
         const promptHistory = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/history");
+                const response = await axios.get("https://genai-server.onrender.com/history");
                 let extractedData = [];
                 if (Array.isArray(response.data)) {
                     extractedData = response.data;

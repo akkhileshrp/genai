@@ -14,7 +14,7 @@ const RightSection = () => {
     setMessages(prevMessages => [...prevMessages, { sender: 'user', text: message }]);
     setMessage("");
     try {
-      const response = await axios.post('http://localhost:5000/generate', {
+      const response = await axios.post('https://genai-server.onrender.com/generate', {
         prompt: message
       });
       setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: response.data }]);
