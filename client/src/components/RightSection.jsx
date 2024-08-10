@@ -10,34 +10,24 @@ const RightSection = () => {
 
   const handleSendMessage = async () => {
     if (message.trim() === "") return;
-
-    // Hide the initial greeting
     setShowGreeting(false);
-
-    // Add the user's message to the messages state
     setMessages(prevMessages => [...prevMessages, { sender: 'user', text: message }]);
-    
+    setMessage("");
     try {
       const response = await axios.post('http://localhost:5000/generate', {
         prompt: message
       });
-
-      // Add the API response to the messages state
       setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: response.data }]);
-      
+
     } catch (error) {
       console.error("Error sending message:", error);
-      // Handle error appropriately
     }
-
-    // Clear the input field
-    setMessage("");
   };
 
   return (
     <section className='rightsection'>
       <div className='geminiversion'>
-        <p className='textone version'>Gemini Mama 2.O</p>
+        <p className='textone gem'>Gemini Mama 2.O</p>
       </div>
       <div className='nochat'>
         <div className='sectionone'>
